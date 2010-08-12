@@ -1,0 +1,16 @@
+<h1>Posts#index</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+<% @posts.each do |post| %>
+    <tr>
+      <td><%=h post.title %></td>
+      <td><%= link_to 'Show', post_path(post) %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Delete', post_path(post), :confir => 'Are you sure?', :method => :delete %></td>
+    </tr>
+<% end %>
+</table>
+
