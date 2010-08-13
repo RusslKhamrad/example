@@ -1,0 +1,15 @@
+</p>
+
+<h1>Show comment</h1>
+
+<p>Nickname:<br/>
+<%= @comment.nickname %>
+</p>
+
+<p>Body:<br/>
+<%= @comment.body %>
+</p>
+
+<p><%= link_to "Back", :action => "index" %>
+<%= link_to "Edit", :action => "edit", :id => @comment.id %>
+

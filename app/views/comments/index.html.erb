@@ -1,0 +1,12 @@
+<p>
+Index page!
+</p>
+<% @comments.each do |comment| %>
+  <p>nickname<%= comment.nickname %></p>
+  <p>text<%= comment.body %></p>
+  <%= link_to "Show", {:action => 'show', :id => comment.id} %>
+  <%= link_to "Edit", {:action => 'edit', :id => comment.id} %>
+  <%= link_to "Delete", {:action => 'destroy', :id => comment.id}, :confirm => "Are you sure?" %>
+<% end %>
+<hr/>
+  <%= link_to "Create a new comment!", :controller => 'comments', :action => 'new' %>

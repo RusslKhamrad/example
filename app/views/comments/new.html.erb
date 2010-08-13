@@ -1,0 +1,19 @@
+</p>
+
+<h1>Add new comment</h1>
+
+<p><% form_tag :action => "create", :method => "post" do %></p>
+
+<p>&lt;</p>
+
+<p>p><label for="comment_nickname">Nickname</label><br/>
+  <%= text_field :comment, :nickname %></p>
+
+<p>&lt;</p>
+
+<p>p><label for="comment_body">Body</label><br/>
+  <%= text_area :comment, :body %>
+  <%= submit_tag "Create" %>
+<% end %></p>
+
+<p><%= link_to 'Back', {:action => 'index'} %>
