@@ -4,9 +4,9 @@ Index page!
 <% @comments.each do |comment| %>
   <p>nickname<%= comment.nickname %></p>
   <p>text<%= comment.body %></p>
-  <%= link_to "Show", {:action => 'show', :id => comment.id} %>
-  <%= link_to "Edit", {:action => 'edit', :id => comment.id} %>
-  <%= link_to "Delete", {:action => 'destroy', :id => comment.id}, :confirm => "Are you sure?" %>
+  <%= link_to "Show", comment_path(comment) %>
+  <%= link_to "Edit", edit_comment_path(comment) %>
+  <%= link_to "Delete", comment_path(comment), :method => :delete, :confirm => 'Are you sure you want to delete this item?' %>
 <% end %>
 <hr/>
-  <%= link_to "Create a new comment!", :controller => 'comments', :action => 'new' %>
+  <%= link_to "Create a new comment!", new_comment_path %>

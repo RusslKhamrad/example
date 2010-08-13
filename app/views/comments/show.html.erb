@@ -10,6 +10,6 @@
 <%= @comment.body %>
 </p>
 
-<p><%= link_to "Back", :action => "index" %>
-<%= link_to "Edit", :action => "edit", :id => @comment.id %>
+<p><%= link_to "Back", comments_path %>
+<%= link_to "Edit", edit_comment_path(@comment) %>
 

@@ -2,7 +2,7 @@
 
 <h1>Edit comment</h1>
 
-<p><% form_tag :action => "update", :id => @comment.id, :method => "post" do %></p>
+<p><% form_tag comment_path(@comment), :method => "put" do %></p>
 
 <p>&lt;</p>
 
@@ -18,4 +18,4 @@
 <% end %></p>
 
 <p><br/>
-<%= link_to 'Back', {:action => 'index'} %>
+<%= link_to 'Back', comments_path %>

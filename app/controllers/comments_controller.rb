@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    Comments.find(params[:id]).destroy
+    Comment.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
 end
